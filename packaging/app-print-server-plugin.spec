@@ -2,22 +2,22 @@
 Name: app-print-server-plugin
 Version: 6.2.0.beta3
 Release: 1%{dist}
-Summary: Print Server Administrator Accounts - APIs and install
+Summary: Print Server Policies - APIs and install
 License: LGPLv3
 Group: ClearOS/Libraries
 Source: app-print-server-plugin-%{version}.tar.gz
 Buildarch: noarch
 
 %description
-Provides Print Server Adminstrator option in the User Manager.
+Print Server Policies provide access control to the PRint Server app.
 
 %package core
-Summary: Print Server Administrator Accounts - APIs and install
+Summary: Print Server Policies - APIs and install
 Requires: app-base-core
 Requires: app-accounts-core
 
 %description core
-Provides Print Server Adminstrator option in the User Manager.
+Print Server Policies provide access control to the PRint Server app.
 
 This package provides the core API and libraries.
 

@@ -17,6 +17,6 @@ clearos_load_language('print_server_plugin');
 // C O N F I G
 ///////////////////////////////////////////////////////////////////////////////
 
-$plugin['name'] = lang('print_server_plugin_print_server_administrators');
+$plugin['name'] = lang('print_server_plugin_print_server_administrator');
 $plugin['description'] = lang('print_server_plugin_app_description');
 $plugin['enabled'] = FALSE;
