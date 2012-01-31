@@ -1,25 +1,28 @@
 
-Name: app-print-server-plugin-core
-Group: ClearOS/Libraries
+Name: app-print-server-plugin
 Epoch: 1
-Version: 1.0.1
+Version: 1.0.2
 Release: 1%{dist}
 Summary: Print Server Policies - APIs and install
 License: LGPLv3
-Packager: ClearFoundation
-Vendor: ClearFoundation
+Group: ClearOS/Libraries
 Source: app-print-server-plugin-%{version}.tar.gz
 Buildarch: noarch
+%description
+Print Server Policies provide access control to the PRint Server app.
+
+%package core
+Summary: Print Server Policies - APIs and install
 Requires: app-base-core
 Requires: app-accounts-core
 
-%description
+%description core
 Print Server Policies provide access control to the PRint Server app.
 
 This package provides the core API and libraries.
 
 %prep
-%setup -q -n app-print-server-plugin-%{version}
+%setup -q
 %build
 
 %install
@@ -28,7 +31,7 @@ cp -r * %{buildroot}/usr/clearos/apps/print_server_plugin/
 
 install -D -m 0644 packaging/print_server.php %{buildroot}/var/clearos/accounts/plugins/print_server.php
 
-%post
+%post core
 logger -p local6.notice -t installer 'app-print-server-plugin-core - installing'
 
 if [ $1 -eq 1 ]; then
@@ -39,7 +42,7 @@ fi
 
 exit 0
 
-%preun
+%preun core
 if [ $1 -eq 0 ]; then
     logger -p local6.notice -t installer 'app-print-server-plugin-core - uninstalling'
     [ -x /usr/clearos/apps/print_server_plugin/deploy/uninstall ] && /usr/clearos/apps/print_server_plugin/deploy/uninstall
@@ -47,7 +50,7 @@ fi
 
 exit 0
 
-%files
+%files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/print_server_plugin/packaging
 %exclude /usr/clearos/apps/print_server_plugin/tests
