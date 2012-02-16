@@ -1,13 +1,14 @@
 
 Name: app-print-server-plugin
 Epoch: 1
-Version: 1.0.2
+Version: 1.0.4
 Release: 1%{dist}
 Summary: Print Server Policies - APIs and install
 License: LGPLv3
 Group: ClearOS/Libraries
 Source: app-print-server-plugin-%{version}.tar.gz
 Buildarch: noarch
+
 %description
 Print Server Policies provide access control to the PRint Server app.
 
