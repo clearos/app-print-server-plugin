@@ -1,7 +1,7 @@
 
 Name: app-print-server-plugin
 Epoch: 1
-Version: 1.0.4
+Version: 1.0.10
 Release: 1%{dist}
 Summary: Print Server Policies - APIs and install
 License: LGPLv3
