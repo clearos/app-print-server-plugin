@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'print_server_plugin';
-$app['version'] = '2.0.18';
+$app['version'] = '2.0.24';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -35,3 +35,5 @@ $app['core_requires'] = array(
 $app['core_file_manifest'] = array( 
    'print_server.php' => array( 'target' => '/var/clearos/accounts/plugins/print_server.php'),
 );
+
+$app['delete_dependency'] = array();
